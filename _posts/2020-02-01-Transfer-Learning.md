@@ -23,30 +23,14 @@ that the combination of elements are likely to adopt. The emerging third-generat
 
 Also, there are four stages of training a machine-learning model: Data collection, Representation(like preprocessing), type of learning, and Model selection. A very important factor is that you have to provide sufficient amount of accurate data to train your machine learning model. 
 
-Let’s talk about some available databases that we can use for machine learning in our field.
-With years of hard work, many DFT computational databases have been setup. 
-Most of them are very large. But the problem is most calculations are calculated by basic exchange correlation functionals, like gga. So the accuracy is relative low. 
-
-At the same time, there are some experimental databases with very high accuracy. But since lots of cases you couldn’t really conduct the experiments. So the size of the dataset is limited. 
-
-We can also obtain some other quantum-mechanical databases like coupled cluster quantum method database. Although they have a better accuracy, all of them are computational expensive. 
+With years of hard work, many DFT computational databases have been setup. Most of them are very large. But the problem is most calculations are calculated by basic exchange correlation functionals, like gga. So the accuracy is relative low. At the same time, there are some experimental databases with very high accuracy. But since lots of cases you couldn’t really conduct the experiments. So the size of the dataset is limited. We can also obtain some other quantum-mechanical databases like coupled cluster quantum method database. Although they have a better accuracy, all of them are computational expensive. 
 
 So, right now we don’t have a proper database with high accuracy and large size. 
+We can take a look at some examples.  OQMD is A large dataset containing DFT-computed materials properties for 341K materials. But Thermo-Calc Software is An experimental data set containing only 1963 samples. So, here comes the question: machine learning needs large amount of data to be accurate, can we use limited amounts of data to achieve a high accuracy?
 
-We can take a look at some examples.  OQMD is A large dataset containing DFT-computed materials properties for 341K materials
-But Thermo-Calc Software is An experimental data set containing only 1963 samples
+There is a Machined Learning framework called “ transfer learning ” which has considerable potential to overcome the problem of limited amounts of data. Transfer learning relies on the concept that various property types, such as physical, chemical, electronic, thermodynamics are physically interrelated. 
 
-So, here comes the question: machine learning needs large amount of data to be accurate, 
-can we use limited amounts of data to achieve a high accuracy?
-
-There is a Machined Learning framework called “ transfer learning ” which has considerable potential to overcome the problem of limited amounts of data. 
-
-Transfer learning relies on the concept that various property types, such as physical, chemical, electronic, thermodynamics are physically interrelated. 
-
-Previously, if we want to predict a target property with small dataset, we just train this small dataset, although the dataset is accurate, with limited amount of data, we couldn’t get a good accuracy. 
-For transfer learning, we can use our exist big dataset to train a model first, and save the common features that are same for different materials, and then use this model to train another small dataset, and then predict a target property with a higher accuracy. 
-
-We know what is transfer learning right row. 
+Previously, if we want to predict a target property with small dataset, we just train this small dataset, although the dataset is accurate, with limited amount of data, we couldn’t get a good accuracy. For transfer learning, we can use our exist big dataset to train a model first, and save the common features that are same for different materials, and then use this model to train another small dataset, and then predict a target property with a higher accuracy. 
 
 Then, let’s focus on how does this transfer learning work. There are two commonly applied procedures, one is frozen featurizer, another one is called fine-tuning techniques. 
 
