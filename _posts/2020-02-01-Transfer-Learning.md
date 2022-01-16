@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: "Predicting material property using transfer learning"
+title: "Predicting material properties using transfer learning"
 date: 2020-02-01
 img: posts/20210324/starting_adventure.jpg
 tags: [general blogging, thoughts, life]
@@ -16,9 +16,7 @@ description: "Midlife career change: a disaster or an opportunity?"
 
 <center><img src="./assets/img/posts/20200201/result.png" width="620"></center>
 
-Today I’m going to talk about predicting materials properties using transfer learning
-
-We start from the background.
+## Background
 
 The evolution of the research workflow in computational chemistry is about 3 generations. 
 
