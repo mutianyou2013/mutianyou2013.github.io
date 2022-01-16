@@ -32,25 +32,11 @@ There is a Machined Learning framework called “ transfer learning ” which ha
 
 Previously, if we want to predict a target property with small dataset, we just train this small dataset, although the dataset is accurate, with limited amount of data, we couldn’t get a good accuracy. For transfer learning, we can use our exist big dataset to train a model first, and save the common features that are same for different materials, and then use this model to train another small dataset, and then predict a target property with a higher accuracy. 
 
-Then, let’s focus on how does this transfer learning work. There are two commonly applied procedures, one is frozen featurizer, another one is called fine-tuning techniques. 
+Then, let’s focus on how does this transfer learning work. There are two commonly applied procedures, one is frozen featurizer, another one is called fine-tuning techniques. I’m gonna mainly talk about this fine-tuning techniques. We still have two steps, the first step is using big dataset to pretrain a model. The second step is using this model to predict a target property. 
 
-I’m gonna mainly talk about this fine-tuning techniques.
+We first input big data, and here we train this deep neural networks, common features are saved in these layers. Then we can use this model, but freeze those layers since we don’t want to lose those common features. We just let the last several layers to be optimized. Then we can get a good prediction of our target property. 
 
-We still have two steps, the first step is using big dataset to pretrain a model. The second step is using this model to predict a target property. 
-
-We first input big data, and here we train this deep neural networks, common features are saved in these layers. 
-
-Then we can use this model, but freeze those layers since we don’t want to lose those common features. We just let the last several layers to be optimized. Then we can get a good prediction of our target property. 
-
-Then, let’s take a look at one example on how to use transfer learning to predict materials properties. 
-
-The input feature here is the element fractions. For example, for OH, fraction of O is 0.5, and fraction of H is also 0.5. 
-
-And the target property is the formation energy of materials.
-
-The pretraining dataset is a DFT dataset with 341K materials. And they trained the model.
-
-Then they used a small database with only 2000 experimental samples to do transfer learning to predict the formation energy. 
+Then, let’s take a look at one example on how to use transfer learning to predict materials properties. The input feature here is the element fractions. For example, for OH, fraction of O is 0.5, and fraction of H is also 0.5. And the target property is the formation energy of materials. The pretraining dataset is a DFT dataset with 341K materials. And they trained the model.Then they used a small database with only 2000 experimental samples to do transfer learning to predict the formation energy. 
 
 Let’s give a look at the training performance. 
 
