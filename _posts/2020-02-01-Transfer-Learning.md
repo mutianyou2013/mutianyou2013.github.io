@@ -12,30 +12,90 @@ description: "Midlife career change: a disaster or an opportunity?"
 
 <center><img src="./assets/img/posts/20200201/TL.pdf" width="620"></center>
 
-As for the focus areas I will start with:
-- Neural Networks fundamentals: history, basic architecture and math behind them
-- Deep Neural Networks
-- Reinforcement Learning
-- Current state of the art: what is at the cutting edge now in terms of Deep Neural Networks and Reinforcement Learning?
-  
-I selected the above areas to focus on based on my personal interests, I have been fascinated by the developments in reinforcement learning for a long time, in particular [Deep Mind's](https://deepmind.com/blog) awesome [Go](https://deepmind.com/blog/article/innovations-alphago), [Chess](https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go) and [Starcraft](https://deepmind.com/blog/article/AlphaStar-Grandmaster-level-in-StarCraft-II-using-multi-agent-reinforcement-learning) playing agents. Therefore, I started reading a lot about it and even started a personal project for coding a [tic-tac-toe learning agent](./deep-q-learning-tic-tac-toe.html).
+Today I’m going to talk about predicting materials properties using transfer learning
 
-With my limited knowledge I have drafted the following learning path:
+We start from the background.
 
-1. Youtube: [Three Blue One Brown's](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw) videos on [Neural Networks](https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi), [Calculus](https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr) and [Linear Algebra](https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab). I cannot recommend them enough, they are of sufficient depth and use animation superbly to facilitate the understanding of the subjects.
-2. Coursera: [Andrew Ng's Machine Learning course](https://www.coursera.org/learn/machine-learning)
-3. Book: [Deep Learning with Python by Francois Chollet](https://www.amazon.com/dp/1617294438/ref=cm_sw_em_r_mt_dp_AV4DHT7CVE95D1SR2JJ8)
-4. Book: [Reinforcement Learning: An Introduction, by Richard S. Sutton and Andrew G. Barto](https://www.amazon.com/dp/0262193981/ref=cm_sw_em_r_mt_dp_10B6J4MDB7QE3YHBQF4X)
+The evolution of the research workflow in computational chemistry is about 3 generations. 
 
-As for practical work I decided to start by [coding my first models from scratch](./ML-Library-from-scratch.html) (without using libraries such as Tensorflow), to be able to deeply understand the math and logic behind the models, so far it has proven to be priceless.
+The first-generation approach is to calculate the physical properties of an input structure, 
+which is often performed via an approximation to the Schrödinger equation  For example, Density functional theory.
 
-For my next project I think I will start to do the basic hand-written digits recognition, which is the Machine Learning Hello World, for this I think I will start to use Tensorflow already.
+In the second-generation approach, by using global optimization (for example, an evolutionary algorithm) 
+an input of chemical composition is mapped to an output that contains predictions of the structure or ensemble of structures 
+that the combination of elements are likely to adopt. 
 
-I will continue to write about my learning road, what I find interesting and relevant, and to document all my practical exercises, as well as news and the state of the art in the world of AI.
+The emerging third-generation approach is to use machine-learning techniques 
+with the ability to predict composition, structure and properties 
+But you have to provide sufficient data and an appropriate model.
 
-So far, all I have learned has been so engaging that I am seriously thinking of a career change. I have 17 years of international experience in multinational corporations across various functions, such as Information Services, Sales, Customer Care and New Products Introduction, and sincerely, I am finding more joy in artificial intelligence than anything else I have worked on before. Let's see where the winds take us.
+Also, there are four stages of training a machine-learning model 
 
-Thanks for reading!
+Data collection, Representation(like preprocessing), type of learning, Model selection
+A very important factor is that you have to provide sufficient amount of accurate data to train your machine learning model. 
+
+Let’s talk about some available databases that we can use for machine learning in our field.
+With years of hard work, many DFT computational databases have been setup. 
+Most of them are very large. But the problem is most calculations are calculated by basic exchange correlation functionals, like gga. So the accuracy is relative low. 
+
+At the same time, there are some experimental databases with very high accuracy. But since lots of cases you couldn’t really conduct the experiments. So the size of the dataset is limited. 
+
+We can also obtain some other quantum-mechanical databases like coupled cluster quantum method database. Although they have a better accuracy, all of them are computational expensive. 
+
+So, right now we don’t have a proper database with high accuracy and large size. 
+
+We can take a look at some examples.  OQMD is A large dataset containing DFT-computed materials properties for 341K materials
+But Thermo-Calc Software is An experimental data set containing only 1963 samples
+
+So, here comes the question: machine learning needs large amount of data to be accurate, 
+can we use limited amounts of data to achieve a high accuracy?
+
+There is a Machined Learning framework called “ transfer learning ” which has considerable potential to overcome the problem of limited amounts of data. 
+
+Transfer learning relies on the concept that various property types, such as physical, chemical, electronic, thermodynamics are physically interrelated. 
+
+Previously, if we want to predict a target property with small dataset, we just train this small dataset, although the dataset is accurate, with limited amount of data, we couldn’t get a good accuracy. 
+For transfer learning, we can use our exist big dataset to train a model first, and save the common features that are same for different materials, and then use this model to train another small dataset, and then predict a target property with a higher accuracy. 
+
+We know what is transfer learning right row. 
+
+Then, let’s focus on how does this transfer learning work. There are two commonly applied procedures, one is frozen featurizer, another one is called fine-tuning techniques. 
+
+I’m gonna mainly talk about this fine-tuning techniques.
+
+We still have two steps, the first step is using big dataset to pretrain a model. The second step is using this model to predict a target property. 
+
+We first input big data, and here we train this deep neural networks, common features are saved in these layers. 
+
+Then we can use this model, but freeze those layers since we don’t want to lose those common features. We just let the last several layers to be optimized. Then we can get a good prediction of our target property. 
+
+Then, let’s take a look at one example on how to use transfer learning to predict materials properties. 
+
+The input feature here is the element fractions. For example, for OH, fraction of O is 0.5, and fraction of H is also 0.5. 
+
+And the target property is the formation energy of materials.
+
+The pretraining dataset is a DFT dataset with 341K materials. And they trained the model.
+
+Then they used a small database with only 2000 experimental samples to do transfer learning to predict the formation energy. 
+
+Let’s give a look at the training performance. 
+
+First, let’s focus on these two values because both are trained from scratch, which means for both cases, they used a random model first, then input data to train the model and got a performance.  
+
+You can see if they have a large dataset, obviously, they’ll get a lower MAE which means a better performance. But since this OQMD dataset itself is not as accurate as experimental data, so we couldn’t really believe this result. 
+
+Then, let’s compare these two values. The first one is to use the model from large dataset, directly predict the experimental values. The MAE is higher. This transfer learning one is still using the model from large dataset, but do a transfer learning process, basically freeze most layers, retrained last several layers and get a predicting performance. This one is much better. 
+
+So the only difference between them are the OQMD-SC is a direct prediction by the large dataset model, and the transfer learning one has a transfer learning procedure based this large dataset model. 
+
+At last, we can compare these two, we can see with transfer learning applied, we can get a much better performance even though we both just use the same experimental dataset to train the model. That’s because the transfer learning method use the pretrained large dataset  model first, and save the common features in the hidden layers. This helps to improve the performance. 
+
+In summary, A transfer learning model shows an enhanced performance compared with traditional machine learning model 
+
+Also, Transfer learning can be further applied to other area with limited amount of accurate data. 
+
+
 
 ### P.S. For the geeks like me, here is a snippet on the technical side of the blog.
 
