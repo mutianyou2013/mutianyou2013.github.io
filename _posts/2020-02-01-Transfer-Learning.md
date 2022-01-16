@@ -10,7 +10,7 @@ author: Armando Maynez
 description: "Midlife career change: a disaster or an opportunity?"
 ---
 
-<center><img src="./assets/img/posts/20200201/TL.pdf" width="620"></center>
+<center><embed src="./assets/img/posts/20200201/TL.pdf" width="620"></center>
 
 Today I’m going to talk about predicting materials properties using transfer learning
 
