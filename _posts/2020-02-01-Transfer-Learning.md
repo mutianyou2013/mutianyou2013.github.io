@@ -18,23 +18,10 @@ description: "Midlife career change: a disaster or an opportunity?"
 
 ## Background
 
-The evolution of the research workflow in computational chemistry is about 3 generations. 
+The evolution of the research workflow in computational chemistry is about 3 generations. The first-generation approach is to calculate the physical properties of an input structure, which is often performed via an approximation to the Schrödinger equation  For example, Density functional theory. In the second-generation approach, by using global optimization (for example, an evolutionary algorithm), an input of chemical composition is mapped to an output that contains predictions of the structure or ensemble of structures 
+that the combination of elements are likely to adopt. The emerging third-generation approach is to use machine-learning techniques with the ability to predict composition, structure and properties. However, you have to provide sufficient data and an appropriate model.
 
-The first-generation approach is to calculate the physical properties of an input structure, 
-which is often performed via an approximation to the Schrödinger equation  For example, Density functional theory.
-
-In the second-generation approach, by using global optimization (for example, an evolutionary algorithm) 
-an input of chemical composition is mapped to an output that contains predictions of the structure or ensemble of structures 
-that the combination of elements are likely to adopt. 
-
-The emerging third-generation approach is to use machine-learning techniques 
-with the ability to predict composition, structure and properties 
-But you have to provide sufficient data and an appropriate model.
-
-Also, there are four stages of training a machine-learning model 
-
-Data collection, Representation(like preprocessing), type of learning, Model selection
-A very important factor is that you have to provide sufficient amount of accurate data to train your machine learning model. 
+Also, there are four stages of training a machine-learning model: Data collection, Representation(like preprocessing), type of learning, and Model selection. A very important factor is that you have to provide sufficient amount of accurate data to train your machine learning model. 
 
 Let’s talk about some available databases that we can use for machine learning in our field.
 With years of hard work, many DFT computational databases have been setup. 
