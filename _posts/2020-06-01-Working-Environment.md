@@ -240,3 +240,57 @@ For more installation details check out the websites listed below.
 
 [https://github.com/henniggroup/VASPsol](https://github.com/henniggroup/VASPsol)
 
+## Quantum Espresso Compilation 
+
+1.**[./]** Make a new folder for q-e 6.5, 
+```	
+mkdir espresso6.5
+```
+
+2.**[./espresso6.5]** Go to espresso6.5 folder, and download q-e 6.5 package from Github (https://github.com/QEF/q-e) by typing command: 
+```	
+git clone https://github.com/QEF/q-e.git 
+```
+
+Or directly copy from here:
+```
+cp -r /work/common/hxin_lab/hxin/cascades/usr/esp-6.5/q-e .
+```
+
+3.**[./espresso6.5/q-e]** A new folder q-e will be made and go to the q-e folder:
+```
+cd q-e
+
+module purge
+
+module reset
+
+module load VASP
+```
+4.**[./espresso6.5/q-e]** For a quick installation we just use :
+```
+./configure [options]
+make all
+```
+5.**[./espresso6.5]** Prepare the pseudopotential folder which contains all needed pseudopotential for quantum espresso to use. 
+
+An example folder is 
+
+```
+/home/hxin/cascades/usr/esp-psp	
+```
+Copy and paste esp-psp folder and add path to 
+```
+Espresso module
+```
+```
+export ASE_ESPRESSO_COMMAND="/home/hxin/cascades/usr/esp-6.5/q-e/bin/pw.x -in PREFIX.pwi > PREFIX.pwo"
+```
+Binaries go in bin/. For more information, see the general documentation in directory **Doc/**, package-specific documentation in **'*/Doc/'**.
+
+User manual: [https://www.quantum-espresso.org/Doc/user_guide.pdf](https://www.quantum-espresso.org/Doc/user_guide.pdf)
+
+Error: [https://lists.quantum-espresso.org/pipermail/users/2020-July/045079.html](https://lists.quantum-espresso.org/pipermail/users/2020-July/045079.html)
+
+Libxc: [https://gitlab.com/libxc/libxc](https://gitlab.com/libxc/libxc)
+
