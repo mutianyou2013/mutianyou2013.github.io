@@ -176,7 +176,7 @@ cp ./VASPsol/src/solvation.F ./vasp.5.4.4/src/
 ```
 20.**[./vasp_suite/src/vasp.5.4.4]** Make sure you add **-Dsol_compat** option to the list of precompiler options (**CPP_OPTIONS**) in the makefile.include
 
-<img src="./assets/img/posts/20200601/Picture1.png" width="660">
+<img src="./assets/img/posts/20200601/Picture1.png" width="540">
 
 For the makefile.include file copied directly from the Installation folder, you don’t need to make any changes. 
 
