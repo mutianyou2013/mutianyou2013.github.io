@@ -232,11 +232,11 @@ export LANG=en_US.UTF-8
 
 For more installation details check out the websites listed below.
 
-https://www.vasp.at/wiki/index.php/A_CentOS_based_installation_of_VASP
+(https://www.vasp.at/wiki/index.php/A_CentOS_based_installation_of_VASP)
 
-https://cms.mpi.univie.ac.at/vasp/vasp/vasp.html
+(https://cms.mpi.univie.ac.at/vasp/vasp/vasp.html)
 
-https://theory.cm.utexas.edu/vtsttools/installation.html
+(https://theory.cm.utexas.edu/vtsttools/installation.html)
 
-https://github.com/henniggroup/VASPsol
+(https://github.com/henniggroup/VASPsol)
 
