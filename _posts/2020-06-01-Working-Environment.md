@@ -176,7 +176,7 @@ cp ./VASPsol/src/solvation.F ./vasp.5.4.4/src/
 ```
 20.**[./vasp_suite/src/vasp.5.4.4]** Make sure you add **-Dsol_compat** option to the list of precompiler options (**CPP_OPTIONS**) in the makefile.include
 
-<img src="./assets/img/posts/20200601/Picture1.png" width="420">
+<img src="./assets/img/posts/20200601/Picture1.png" width="660">
 
 For the makefile.include file copied directly from the Installation folder, you don’t need to make any changes. 
 
@@ -217,7 +217,7 @@ cp /work/common/hxin_lab/hxin/Installation/kernel/vdw_kernel.bindat ./
 
 (a).If you get some errors like the screenshot below, you probably didn’t delete all spaces in step 17. Better to directly copy and paste the right one.
 
-<img src="./assets/img/posts/20200601/Picture2.png" width="420">
+<img src="./assets/img/posts/20200601/Picture2.png" width="660">
 
 (b). If you get some errors like the screenshot below, you’ll probably need to set up your locale:
 
@@ -228,15 +228,15 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
-<img src="./assets/img/posts/20200601/Picture3.png" width="420">
+<img src="./assets/img/posts/20200601/Picture3.png" width="660">
 
 For more installation details check out the websites listed below.
 
-(https://www.vasp.at/wiki/index.php/A_CentOS_based_installation_of_VASP)
+[https://www.vasp.at/wiki/index.php/A_CentOS_based_installation_of_VASP](https://www.vasp.at/wiki/index.php/A_CentOS_based_installation_of_VASP)
 
-(https://cms.mpi.univie.ac.at/vasp/vasp/vasp.html)
+[https://cms.mpi.univie.ac.at/vasp/vasp/vasp.html](https://cms.mpi.univie.ac.at/vasp/vasp/vasp.html)
 
-(https://theory.cm.utexas.edu/vtsttools/installation.html)
+[https://theory.cm.utexas.edu/vtsttools/installation.html](https://theory.cm.utexas.edu/vtsttools/installation.html)
 
-(https://github.com/henniggroup/VASPsol)
+[https://github.com/henniggroup/VASPsol](https://github.com/henniggroup/VASPsol)
 
