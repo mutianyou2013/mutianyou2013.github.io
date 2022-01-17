@@ -10,12 +10,6 @@ author: Armando Maynez
 description: "Midlife career change: a disaster or an opportunity?"
 ---
 
-<center><img src="./assets/img/posts/20200201/TL.png" width="620"></center>
-
-<center><img src="./assets/img/posts/20200201/TLnew1.png" width="620"></center>
-
-<center><img src="./assets/img/posts/20200201/result.png" width="620"></center>
-
 ## Background
 
 The evolution of the research workflow in computational chemistry is about 3 generations. The first-generation approach is to calculate the physical properties of an input structure, which is often performed via an approximation to the Schrödinger equation  For example, Density functional theory. In the second-generation approach, by using global optimization (for example, an evolutionary algorithm), an input of chemical composition is mapped to an output that contains predictions of the structure or ensemble of structures 
@@ -54,6 +48,11 @@ In summary, A transfer learning model shows an enhanced performance compared wit
 
 Also, Transfer learning can be further applied to other area with limited amount of accurate data. 
 
+<center><img src="./assets/img/posts/20200201/TL.png" width="620"></center>
+
+<center><img src="./assets/img/posts/20200201/TLnew1.png" width="620"></center>
+
+<center><img src="./assets/img/posts/20200201/result.png" width="620"></center>
 
 
 ### P.S. For the geeks like me, here is a snippet on the technical side of the blog.
