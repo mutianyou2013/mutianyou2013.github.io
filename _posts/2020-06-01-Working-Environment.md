@@ -15,6 +15,27 @@ description: "ELI5: what is a neural network."
 
 ## How to log onto the ARC computing system
 
+1.Install VPN
+
+For users that want to use the ARC system off campus, a VPN is needed. Check out how to install and use the software through this website (they provide very detailed instructions and videos): [VT4help](https://vt4help.service-now.com/sp?id=kb_article&sys_id=d5496fca0f8b4200d3254b9ce1050ee5#windowsdownloadninstall). All different systems (Linux, MacOS and Windows) are supported. Make sure you connect to the VPN before logging onto the computing system when you are off campus.  
+
+2.Mac users login
+
+Open your terminal software (in launchpad → other). Login by ssh commands listed below. Our university’s supercomputing system has three available servers: Newriver, Cascades, and Tinkercliffs. You can log into any one of them to get access to your data since they are sharing the same storage. 
+
+Newriver: ssh -Y #yourid#@newriver1.arc.vt.edu OR 
+ssh -Y #yourid#@newriver2.arc.vt.edu
+Cascades: ssh -Y #yourid#@cascades1.arc.vt.edu OR 
+ssh -Y #yourid#@cascades2.arc.vt.edu
+Tinkercliffs: ssh -Y #yourid#@tinkercliffs1.arc.vt.edu OR 
+ssh -Y #yourid#@tinkercliffs2.arc.vt.edu
+
+Then press Enter you will be asked to type in your password which is your VT account password (not your network password). Nothing will show up when you type in your password but the system will recognize it, just make sure it’s correct and then press Enter. Prepare your phone’s DUO app ready with you since you will need a 2-step authentication.
+
+Use this format since the 2-step authentication: mypassword,push (See [https://arc.vt.edu/2fa/](https://arc.vt.edu/2fa/)). After typing in your password, press Enter and your DUO app will ask you for authorization. 
+
+
+
 ## VASP Compilation
 
 For this instruction, make sure you copy the right files from the right directory. **‘/path/to’** means you have to replace it with the specific path in your own account. 
