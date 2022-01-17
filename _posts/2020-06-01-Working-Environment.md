@@ -10,8 +10,6 @@ category: theory
 author: Armando Maynez
 description: "ELI5: what is a neural network."
 ---
-  
-# Working-environment
 
 ## How to log onto the ARC computing system
 
@@ -78,6 +76,151 @@ Then you will be asked to type in your password which is the same as your vt acc
 After this, you will enter the server file system finally. 
 
 <center><img src="./assets/img/posts/20200601/entered.png" width="540"></center>
+
+## Setting up working environments:
+
+It’s better to compile VASP first for some steps to be working. For this instruction, make sure you copy the right files from the right directory. ‘/path/to’ means you have to replace it with the specific path in your own account. 
+
+1.**[./]** First setup Miniconda3 environment. 
+
+./ directory here can be your home directory: 
+```python
+/home/yourid
+```
+You can make a new directory to put all packages in: 
+```python
+make usr
+```
+
+2.**[./usr]** Copy and paste Miniconda3 package from: 
+
+```python
+cp /work/common/hxin_lab/hxin/Installation/Miniconda3-latest-Linux-x86_64.sh ./
+```
+3.**[./usr]** Compile Miniconda3: 
+```python
+bash Miniconda3-latest-Linux-x86_64.sh 
+```
+
+By default Miniconda3 will be installed to your home directory, you can change the path to during the installation process. For example, you can change it to: 
+```python
+/home/youruserid/usr/miniconda3
+```
+4.**[./usr]** After setting up miniconda3, you can set up some ASE environments:
+
+You can copy and paste the whole folder for specific versions of ASE to the usr directory.
+
+```python
+cp -r /work/common/hxin_lab/hxin/Installation/ase-3.17.0 ./
+cp -r /work/common/hxin_lab/hxin/Installation/ase-3.19.0 ./
+cp -r /work/common/hxin_lab/hxin/Installation/ase-3.15 ./
+```
+
+5.**[./]** Setup priviatemodules
+
+```python
+mkdir priviatemodules; cd priviatemodules
+cp -r /work/common/hxin_lab/hxin/Installation/priviatemodules/* .
+```
+
+6.**[./priviatemodules]** Change paths for VASP modules. For this step, you have to compile VASP first, following another instruction for VASP compilation. 
+
+```python
+cd vasp_l; emacs 5.4.4-vtst
+```
+
+Change all paths to your own paths:
+
+```python
+append-path PATH /path/to/vasp_suite/src/vasp.5.4.4/bin
+setenv VASP_PP_PATH /path/to/vasp_suite/lib
+setenv VASP_SCRIPT /path/to/priviatemodules/ase_vasp/run_vasp.py
+```
+
+7.**[./priviatemodules]** Change paths for ASE modules. 
+```python
+cd ase; emacs 3.19
+```
+Change all paths to your own paths:
+```python
+append-path     PATH    /work/tianyou/usr/ase-3.19.0/ase-3.19.0/bin
+append-path     PYTHONPATH    /work/tianyou/usr/ase-3.19.0/ase-3.19.0
+```
+```python
+emacs 3.17
+```
+Change all paths to your own paths:
+```python
+append-path     PATH    /work/common/hxin_lab/hxin/cascades/usr/ase-3.17.0/ase-3.17.0/bin
+append-path     PYTHONPATH    /work/common/hxin_lab/hxin/cascades/usr/ase-3.17.0/ase-3.17.0
+```
+```python
+emacs 3.15
+```
+Change all paths to your own paths:
+```python
+append-path     PATH    /home/hxin/cascades/usr/ase-3.15/bin
+append-path     PYTHONPATH   /home/hxin/cascades/usr/ase-3.15/lib/python2.7/site-packages
+```
+8.**[./]** Script
+```python
+cp -r /work/common/hxin_lab/hxin/Installation/Script .
+```
+9.**[./]** Setup .modules.
+
+Copy .modules files which contain modules for VASP running and need to be sourced every time before you want to use VASP. 
+```python
+cp /work/common/hxin_lab/hxin/Installation/modules/* .
+```
+ls -A will show hidden files in this directory
+
+Edit .modules.vasp-vtst3 file and change the miniconda3 path:
+```python
+module purge
+module reset
+
+module load VASP
+module unload VASP/5.4.4-intel-2019b
+module load vasp_l/5.4.4-vtst
+module load ase/3.19
+
+export PATH=“/path/to/miniconda3/bin:$PATH"
+```
+
+10.**[./]** Setup .bashrc
+
+```python
+alias cdw="cd /work/$(whoami)"
+alias ag="ase gui"
+
+export PATH=/path/to/Script:$PATH
+export PYTHONPATH=/path/to/Script:$PYTHONPATH
+export PATH=/path/to/Script/vtst:$PATH
+export PYTHONPATH=/path/to/Script/vtst:$PYTHONPATH
+
+export MODULEPATH=/path/to/priviatemodules:$MODULEPATH
+```
+
+11.**[./]** Conda install numpy, scipy
+
+Install necessary packages for conda:
+```python
+source ~/.bashrc
+source /path/to/.modules.vasp-vtst3
+
+Install numpy: conda install -c anaconda numpy
+
+Install scipy: conda install -c anaconda scipy 
+```
+For other unnecessary packages, you can search conda installation commands on google. 
+
+12.**[./]** Test with your Script.py and ASE GUI to see if all modules work or not.
+
+13.**[./]** Every time you want to use VASP you have to type:
+```python
+source /path/to/.modules.vasp-vtst3
+```
+For convenience you can also add this command to ~/.bashrc. 
 
 ## VASP Compilation
 
