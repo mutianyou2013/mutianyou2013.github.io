@@ -20,6 +20,8 @@ An open challenge is finding low-cost catalysts to drive these reactions at high
 
 To enable the broader research community to participate in this important project, we are releasing the Open Catalyst Dataset for training ML models. The dataset contains 1.2 million molecular relaxations with results from over 250 million DFT calculations. In addition to the data, baseline models and code are provided on our Github page. View the leaderboard to see the latest results and to submit your own to the evaluation server! Join the discuss forum to join the discussion with the community and ask any questions.
 
+However, it's not efficient to grab useful data from that huge database, so I set up a couple of codes for quick inquiries. 
+
 
 
 
