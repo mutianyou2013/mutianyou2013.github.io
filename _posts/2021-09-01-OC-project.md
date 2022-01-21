@@ -22,7 +22,9 @@ To enable the broader research community to participate in this important projec
 
 However, it's not efficient to grab useful data from that huge database, so I set up a couple of codes for quick inquiries. 
 
+## Materials Project data mining
 
+## Brief introduction of crystal structures.
 
 
 
