@@ -77,6 +77,48 @@ After this, you will enter the server file system finally.
 
 <center><img src="./assets/img/posts/20200601/entered.png" width="540"></center>
 
+4.Generate a ssh key for quick login next time.
+
+(1). In your local terminal:
+```python
+ssh-keygen -t rsa
+```
+Press **[ENTER]** key —- accept the default location. The ssh-keygen utility prompts you for a passphrase.
+Press **[ENTER]** key —- accept the default (no passphrase). Or you can type in a passphrase. 
+Press **[ENTER]** key —- Continue to leave it empty. Or you can enter the passphrase a second time to continue. 
+After you confirm the passphrase, the system generates the key pair (private and public keys)
+
+Your identification has been saved in /Users/myname/.ssh/id_rsa.
+Your public key has been saved in /Users/myname/.ssh/id_rsa.pub.
+Your private key is saved to the id_rsa file in the .ssh directory. 
+The key fingerprint is:
+ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|         .       |
+|        E .      |
+|   .   . o       |
+|  o . . S .      |
+| + + o . +       |
+|. + o = o +      |
+| o...o * o       |
+|.  oo.o .        |
++-----------------+
+
+Refer to this website for more explanations. 
+
+[https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x](https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-mac-os-x)
+
+(2). Save your public key to the server
+
+Go to **[id_rsa.pub]** file you generated just now to copy your public key. (Remember to copy everything)
+Login to your server account.
+Go to **[~/.ssh]** folder and open authorized_keys file
+paste your public key to this file.
+Save the file.
+
+
 ## Setting up working environments:
 
 It’s better to compile VASP first for some steps to be working. For this instruction, make sure you copy the right files from the right directory. ‘/path/to’ means you have to replace it with the specific path in your own account. 
