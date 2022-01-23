@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title: "Open Catalyst Project data mining"
-date: 2021-09-01
+date: 2021-08-01
 img: posts/20210324/starting_adventure.jpg
 tags: [general blogging, thoughts, life]
 author: Armando Maynez
