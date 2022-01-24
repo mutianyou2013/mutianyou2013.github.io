@@ -27,6 +27,8 @@ However, it's not efficient to grab useful data from that huge database, so I se
 
 ## Materials Project data mining
 
+By computing properties of all known materials, the Materials Project aims to remove guesswork from materials design in a variety of applications. Experimental research can be targeted to the most promising compounds from computational data sets. Researchers will be able to data-mine scientific trends in materials properties. By providing materials researchers with the information they need to design better, the Materials Project aims to accelerate innovation in materials research.
+
 ## Brief introduction to crystal structures.
 
 
