@@ -25,6 +25,73 @@ To enable the broader research community to participate in this important projec
 
 However, it's not efficient to grab useful data from that huge database, so I set up a couple of codes for quick inquiries. 
 
+```python
+import pandas as pd
+import pickle
+import os
+```
+```python
+l1 = ['Pt']
+l2 = ['Al','Ga','Ge','In','Sn','Sb','Tl','Pb','Bi','Po']
+l3 = ['H','Li','Na','K','Rb','Cs','Fr',
+      'Be','Mg','Ca','Sr','Ba','Ra',
+      'Sc','Y','Lu','Lr',
+      'Ti','Zr','Hf','Rf',
+      'V','Nb','Ta','Db',
+      'Cr','Mo','W','Sg',
+      'Mn','Tc','Re','Bh',
+      'Fe','Ru','Os','Hs',
+      'Co','Rh','Ir','Mt',
+      'Ni','Pd','Ds',
+      'Zn','Cd','Hg','Cn',
+      'B','Nh',
+      'C','Si','Fl',
+      'N','As',
+      'O','S','Se','Te',
+      'F','Cl','Br','I','At','P']
+l4 = ['Li','Na','K','Rb','Cs','Fr',
+      'Be','Mg','Ca','Sr','Ba','Ra',
+      'Nh',
+      'Si','Fl',
+      'As',
+      'Se','Te',
+      'Cl','Br','At']
+l5 = ['H','P','B','C','N','S','O','F','I']
+```
+
+```python
+f1 = pd.read_pickle('../OC.pkl')
+dict1 = {}
+dict2 = {}
+f = {}
+
+j = 0
+k = 0
+
+for i,n in enumerate(f1):
+    if (f1[n]['miller_index'][0] == 1 and f1[n]['miller_index'][1] == 1 and f1[n]['miller_index'][2] == 1) or (f1[n]['m\
+iller_index'][0] == 1 and f1[n]['miller_index'][1] == 0 and f1[n]['miller_index'][2] == 0):
+        if any(word in f1[n]['bulk_symbols'] for word in l2):
+            if any(word in f1[n]['bulk_symbols'] for word in l4):
+                continue
+            else:
+                #f[n] = {f[n]['bulk_symbols'], f[n]['miller_index']}                                                    
+                f[n] = f1[n]
+                k += 1
+```
+
+```python
+if os.path.exists('index.pickle'): os.remove('index.pickle')
+if os.path.exists('index.txt'): os.remove('index.txt')
+
+with open('index.pickle', 'wb') as handle:
+    pickle.dump(f, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('index.txt', 'w') as f:
+    print(f, file=f)
+
+print ('your job is done, total {} systems'.format(j))
+```
+
 ## Materials Project data mining
 
 By computing properties of all known materials, the Materials Project aims to remove guesswork from materials design in a variety of applications. Experimental research can be targeted to the most promising compounds from computational data sets. Researchers will be able to data-mine scientific trends in materials properties. By providing materials researchers with the information they need to design better, the Materials Project aims to accelerate innovation in materials research.
