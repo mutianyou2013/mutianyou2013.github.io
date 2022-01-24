@@ -25,11 +25,17 @@ To enable the broader research community to participate in this important projec
 
 However, it's not efficient to grab useful data from that huge database, so I set up a couple of codes for quick inquiries. 
 
+
+### Screen alloys with p-block metals and terminations of (111) and (100)
+
+Import 
+
 ```python
 import pandas as pd
 import pickle
 import os
 ```
+Lists of all chemical elements in different blocks. Metals in l2 is the so-called p-block metals.
 ```python
 l1 = ['Pt']
 l2 = ['Al','Ga','Ge','In','Sn','Sb','Tl','Pb','Bi','Po']
@@ -59,6 +65,8 @@ l4 = ['Li','Na','K','Rb','Cs','Fr',
 l5 = ['H','P','B','C','N','S','O','F','I']
 ```
 
+Read in data and filter it.
+
 ```python
 f1 = pd.read_pickle('../OC.pkl')
 dict1 = {}
@@ -79,6 +87,8 @@ iller_index'][0] == 1 and f1[n]['miller_index'][1] == 0 and f1[n]['miller_index'
                 f[n] = f1[n]
                 k += 1
 ```
+
+Save data. 
 
 ```python
 if os.path.exists('index.pickle'): os.remove('index.pickle')
