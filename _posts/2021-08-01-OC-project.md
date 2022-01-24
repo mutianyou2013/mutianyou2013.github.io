@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: "Open Catalyst Project data mining"
+title: "Data mining for catalyst materials"
 date: 2021-08-01
 img: posts/20210324/starting_adventure.jpg
 tags: [general blogging, thoughts, life]
@@ -12,9 +12,12 @@ description: "Midlife career change: a disaster or an opportunity?"
 
 ## Overview
 
-The Open Catalyst Project is a collaborative research effort between Facebook AI Research (FAIR) and Carnegie Mellon University’s (CMU) Department of Chemical Engineering. The aim is to use AI to model and discover new catalysts for use in renewable energy storage to help in addressing climate change.
+Catalyst materials are playing important roles in the whole world. Catalysts are composed of different chemical species, leading to the different catalytic performances. While catalysts are often composed of a single kind of metal, they can also be a combination of several or even more than ten kinds of different metals. So the whole possible catalyst space is huge, which means it's extremely hard to directly synthesize each of them and tell which one performs better for a specific case. Thus, machine learning methods step in to help screen the catalysts, but ML methods usually require large data sets for accuracy. Nowadays, many research scientists developed databases for ML usage, but these kind of databases are very large, and include probably all possibly combinations, which may not be the case for a specific catalytic reaction which only needs a small part of this database. So, there is a need to filter the large database to clean the data for a specific problem. 
 
-Scalable and cost-effective solutions to renewable energy storage are essential to addressing the world’s rising energy needs while reducing climate change. As we increase our reliance on renewable energy sources such as wind and solar, which produce intermittent power, storage is needed to transfer power from times of peak generation to peak demand. This may require the storage of power for hours, days, or months. One solution that offers the potential of scaling to nation-sized grids is the conversion of renewable energy to other fuels, such as hydrogen. To be widely adopted, this process requires cost-effective solutions to running chemical reactions.
+
+## Open Catalyst Project data mining
+
+The Open Catalyst Project is a collaborative research effort between Facebook AI Research (FAIR) and Carnegie Mellon University’s (CMU) Department of Chemical Engineering. The aim is to use AI to model and discover new catalysts for use in renewable energy storage to help in addressing climate change.
 
 An open challenge is finding low-cost catalysts to drive these reactions at high rates. Through the use of quantum mechanical simulations (density functional theory), new catalyst structures can be tested and evaluated. Unfortunately, the high computational cost of these simulations limits the number of structures that may be tested. The use of AI or machine learning may provide a method to efficiently approximate these calculations, leading to new approaches in finding effective catalysts.
 
