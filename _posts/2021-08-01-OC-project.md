@@ -27,7 +27,7 @@ However, it's not efficient to grab useful data from that huge database, so I se
 
 ## Materials Project data mining
 
-## Brief introduction of crystal structures.
+## Brief introduction to crystal structures.
 
 
 
