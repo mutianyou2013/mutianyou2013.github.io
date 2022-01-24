@@ -96,6 +96,75 @@ with open('index.txt', 'w') as f:
 
 print ('your job is done, total {} systems'.format(j))
 ```
+T+P
+```python
+f = pd.read_pickle('../l4/index.pickle')
+dict1 = {}
+dict2 = {}
+
+j = 0
+k = 0
+
+for i,n in enumerate(f):
+    m = 0; p = 0
+    for word in l5:
+        if word in f[n]['bulk_symbols']:
+            string  = f[n]['bulk_symbols']
+            results = [i for i in range(len(string)) if string.startswith(word, i)]
+            print (results)
+            for q in results:
+                try:
+                    small = f[n]['bulk_symbols'][q+1]
+                    #                print (small)                                                                      
+                    m += 1
+                except:
+                    break
+		if (word == 'P' and (small in ['t','d','b','o'])) or \
+                   (word == 'H' and (small in ['f','s','g'])) or \
+                   (word == 'B' and (small in ['a','e','i','r','h'])) or \
+                   (word == 'C' and (small in ['a','s','o','l','r','u','d','n'])) or \
+                   (word == 'N' and (small in ['a','b','i','h'])) or \
+                   (word == 'S' and (small in ['e','n','b','r','c','g','i'])) or \
+                   (word == 'O' and small == 's') or \
+                   (word == 'F' and (small in ['r','e','l'])) or \
+                   (word == 'I' and (small in ['r','n'])):
+                    p += 1
+
+    print (f[n]['bulk_symbols'],m,p)
+    if m == p:
+        dict2[n] = {f[n]['bulk_symbols'], f[n]['miller_index']}
+        dict1[n] = f[n]
+        j += 1
+```
+Make sure the materials are bimetallic alloys.
+```python
+f1 = pd.read_pickle('../T+P/index.pickle')
+dict1 = {}
+dict2 = {}
+f = {}
+
+j = 0
+k = 0
+
+for i,n in enumerate(f1):
+    r = 0
+    for word in l2:
+        if word in f1[n]['bulk_symbols']:
+            r += 1
+    if r == 1:
+        f[n] = f1[n]
+
+for i,n in enumerate(f):
+    m = 0; p = 0; r = 0
+    for word in l3:
+        if word in f[n]['bulk_symbols']:
+            r += 1
+    if r == 1:
+        dict2[n] = {f[n]['bulk_symbols'], f[n]['miller_index']}
+        dict1[n] = f[n]
+        j += 1
+```
+
 
 ## Materials Project data mining
 
