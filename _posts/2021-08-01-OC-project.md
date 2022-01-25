@@ -164,8 +164,6 @@ for i,n in enumerate(f):
         dict1[n] = f[n]
         j += 1
 ```
-u
-
 ## Materials Project data mining
 
 By computing properties of all known materials, the Materials Project aims to remove guesswork from materials design in a variety of applications. Experimental research can be targeted to the most promising compounds from computational data sets. Researchers will be able to data-mine scientific trends in materials properties. By providing materials researchers with the information they need to design better, the Materials Project aims to accelerate innovation in materials research.
