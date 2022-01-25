@@ -96,7 +96,7 @@ with open('index.txt', 'w') as f:
 
 print ('your job is done, total {} systems'.format(j))
 ```
-T+P
+Screen all combinations of transition metals and p-block metals.
 ```python
 f = pd.read_pickle('../l4/index.pickle')
 dict1 = {}
