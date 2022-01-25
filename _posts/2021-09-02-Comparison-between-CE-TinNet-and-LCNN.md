@@ -2,20 +2,21 @@
 layout: post
 read_time: true
 show_date: true
-title: "Starting the adventure"
+title: "Comparison between CE-TinNet and LCNN"
 date: 2021-09-02
 img: posts/20210324/starting_adventure.jpg
 tags: [general blogging, thoughts, life]
-author: Armando Maynez
+author: Tianyou Mou
 description: "Midlife career change: a disaster or an opportunity?"
 ---
-In the midst of a global pandemic caused by the SARS-COV2 coronavirus; I decided to start blogging. I wanted to blog since a long time, I have always enjoyed writing, but many unknowns and having "no time" for it prevented me from taking it up. Things like: "I don't really know who my target audience is", "what would my topic or topics be?", "I don't think I am a world-class expert in anything", and many more kept stopping me from setting up my own blog. Now seemed like a good time as any so with those and tons of other questions in my mind I decided it was time to start.
 
-Funnily, this is not my first post. The birth of the blog came very natural as a way to "document" my newly established pursuit for getting myself into Machine Learning. This new adventure of mine comprises several things, and if I want to succeed I need to be serious about them all:
-- I want to start coding again! I used to code a long time ago, starting when I was 8 years old in a Tandy Color Computer hooked up to my parent's TV.
-- Machine Learning is a vast, wide subject, I want to learn the generals, but also to select a few areas to focus on.
-- Setting up a blog to document my journey and share it:
-- Establish a learning and blogging routine. If I don't do this, I am sure this endeavour will die off soon.
+## Overview
+
+The lattice convolutional neural network (LCNN) is a Python library for deep learning of lattice system developed by the Vlachos group at the University of Delaware and Jung group at KAIST. The model has been built in hope to improve upon cluster expansion methods, linear regression based on the clusters in the lattice. The LCNN performs better than the cluster expansion and cluster expansion based machine learning methods with sufficient number of data points.
+
+I employed this LCNN to train the Cluster expansion model and then compare with the CE-TinNet model. 
+
+
 
 As for the focus areas I will start with:
 - Neural Networks fundamentals: history, basic architecture and math behind them
