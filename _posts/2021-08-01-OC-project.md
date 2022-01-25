@@ -164,11 +164,103 @@ for i,n in enumerate(f):
         dict1[n] = f[n]
         j += 1
 ```
-
+u
 
 ## Materials Project data mining
 
 By computing properties of all known materials, the Materials Project aims to remove guesswork from materials design in a variety of applications. Experimental research can be targeted to the most promising compounds from computational data sets. Researchers will be able to data-mine scientific trends in materials properties. By providing materials researchers with the information they need to design better, the Materials Project aims to accelerate innovation in materials research.
+
+```python
+import pandas as pd
+import pickle
+import os
+from pymatgen import MPRester
+
+data = m.query(criteria={"elements": {"$nin":l6,"$in": l2},"nelements": 2,"spacegroup.symbol":"Pm-3m"}, properties=["material_id","pretty_formula","spacegroup.symbol"])
+
+with open('index', 'w') as txt:
+    print(data, file = txt)
+
+data1 = {}
+for i,n in enumerate(data):
+    if ('3' in data[i]['pretty_formula']) and all(num not in data[i]['pretty_formula'] for num in l_):
+#        print (data[i])                                                                                                
+        ID = data[i]['material_id']
+        data1[ID] = data[i]
+        z += 1
+
+with open('index.pickle', 'wb') as handle:
+    pickle.dump(data1, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('index1', 'w') as txt:
+    print(data1, file = txt)
+
+print ('your job is done, total {} systems'.format(z))
+```
+
+Screen out Pm3m type of crystal structure.
+```python
+m = MPRester('MlyixfIghRqd56ET')
+
+f = pd.read_pickle('../Bimetallic/index.pickle')
+
+dict1 = {}
+dict2 = {}
+dict3 = {}
+
+for i,n in enumerate(f):
+    ID = f[n]['bulk_mpid']
+    if ID in f1:
+        if f1[ID]['spacegroup.symbol'] == 'Pm-3m':
+            dict3[n] = f[n]
+            dict2[n] = {f[n]['bulk_symbols'],f[n]['bulk_mpid'], f[n]['miller_index'],f1[ID]['spacegroup.symbol'],f[n]['ads_symbols']}
+            dict1[n] = f[n]
+            z += 1
+
+if os.path.exists('index.pickle'): os.remove('index.pickle')
+if os.path.exists('index'): os.remove('index')
+
+with open('index.pickle', 'wb') as handle:
+    pickle.dump(dict1, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('index', 'w') as txt:
+    print(dict2, file = txt)
+
+print ('your job is done, total {} systems'.format(z))
+```
+
+### Try to match the two data sets for A3B type of alloys
+
+```python
+m = MPRester('MlyixfIghRqd56ET')
+
+f = pd.read_pickle('../OC.pkl')
+f1 = pd.read_pickle('../2e_1/index.pickle')
+dict1 = {}
+dict2 = {}
+dict3 = {}
+
+for i,n in enumerate(f):
+    ID = f[n]['bulk_mpid']
+    ADS = f[n]['ads_symbols']
+    if ID in f1:
+        if ADS == '*H':
+            if (f[n]['miller_index'][0] == 1 and f[n]['miller_index'][1] == 1 and f[n]['miller_index'][2] == 1) \
+            or (f[n]['miller_index'][0] == 1 and f[n]['miller_index'][1] == 0 and f[n]['miller_index'][2] == 0):
+                dict2[n] = {f[n]['bulk_symbols'],f[n]['bulk_mpid'],f[n]['miller_index'],
+                            f1[ID]['spacegroup.symbol'],f[n]['ads_symbols']}
+                dict1[n] = f[n]
+                z += 1
+
+if os.path.exists('index.pickle'): os.remove('index.pickle')
+if os.path.exists('index'): os.remove('index')
+
+with open('index.pickle', 'wb') as handle:
+    pickle.dump(dict1, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('index', 'w') as txt:
+    print(dict2, file = txt)
+
+print ('your job is done, total {} systems'.format(z))
+```
+
 
 ## Brief introduction to crystal structures.
 
