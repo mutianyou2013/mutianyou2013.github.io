@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Bash tools"
 date: 2021-02-01
-img: posts/20210201/bash.pdf
+img: posts/20210201/bash.png
 tags: [neural networks, machine learning, artificial intelligence]
 category: theory
 author: Tianyou Mou
