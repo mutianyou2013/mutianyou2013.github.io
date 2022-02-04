@@ -2,8 +2,8 @@
 layout: post
 read_time: true
 show_date: true
-title: "CE-TinNet"
-date: 2021-09-01
+title: "Bash tools"
+date: 2021-02-01
 img: posts/20210402/post7-header.webp
 tags: [neural networks, machine learning, artificial intelligence]
 category: theory
@@ -11,6 +11,14 @@ author: Tianyou Mou
 description: "ELI5: what is a neural network."
 mathjax: yes
 ---
+
+This is a tool to query the current running jobs in the server's queue. It has the function that you can directly obtain more info than the 'squeue' command, which is the popular command for the slurm workload manager. 
+
+Key features:
+
+- Show the RunTime and TimeLimit as the same time, which helps you to get your job status.
+- Show the job's running directory, which can be directly accessed. It can save lots of time to find the job's directory when you are running multiple jobs
+
 ```bash
 #!/usr/bin/env bash
 
