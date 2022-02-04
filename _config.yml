@@ -10,7 +10,7 @@ logo-icon-SEO: "/assets/img/branding/MVM-symbol-black.png" # must be a non SVG f
 
 # Night/Dark mode
 # Default mode is "auto", "auto" is for auto nightshift
-# (20:00 - 07:00), "manual" is for manual toggle, and
+# (19:00 - 07:00), "manual" is for manual toggle, and
 # "on/off" is for default on/off.
 #
 # Whatever the user's choice is, it will supersede the
