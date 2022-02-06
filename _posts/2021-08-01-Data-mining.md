@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Data Screening for catalyst materials"
 date: 2021-08-01
-img: posts/20210324/starting_adventure.jpg
+img: posts/20210801/Datamining.png
 tags: [python, data]
 author: Armando Maynez
 description: "Midlife career change: a disaster or an opportunity?"
