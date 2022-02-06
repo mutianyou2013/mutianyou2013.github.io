@@ -15,7 +15,7 @@ description: "Midlife career change: a disaster or an opportunity?"
 Catalyst materials are playing important roles in the whole world. Catalysts are composed of different chemical species, leading to the different catalytic performances. While catalysts are often composed of a single kind of metal, they can also be a combination of several or even more than ten kinds of different metals. So the whole possible catalyst space is huge, which means it's extremely hard to directly synthesize each of them and tell which one performs better for a specific case. Thus, machine learning methods step in to help screen the catalysts, but ML methods usually require large data sets for accuracy. Nowadays, many research scientists developed databases for ML usage, but these kind of databases are very large, and include probably all possibly combinations, which may not be the case for a specific catalytic reaction which only needs a small part of this database. So, there is a need to filter the large database to clean the data for a specific problem. 
 
 
-## Open Catalyst Project data mining
+## Open Catalyst Project data screening
 
 The Open Catalyst Project is a collaborative research effort between Facebook AI Research (FAIR) and Carnegie Mellon University’s (CMU) Department of Chemical Engineering. The aim is to use AI to model and discover new catalysts for use in renewable energy storage to help in addressing climate change.
 
@@ -164,7 +164,7 @@ for i,n in enumerate(f):
         dict1[n] = f[n]
         j += 1
 ```
-## Materials Project data mining
+## Materials Project data screening
 
 By computing properties of all known materials, the Materials Project aims to remove guesswork from materials design in a variety of applications. Experimental research can be targeted to the most promising compounds from computational data sets. Researchers will be able to data-mine scientific trends in materials properties. By providing materials researchers with the information they need to design better, the Materials Project aims to accelerate innovation in materials research.
 
