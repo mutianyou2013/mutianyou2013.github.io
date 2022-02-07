@@ -3,9 +3,9 @@ layout: post
 read_time: true
 show_date: true
 title: "Calculating Hartree Fock Energy of Hydrogen Using Python"
-date: 2021-09-02
-img: posts/20210324/starting_adventure.jpg
-tags: [general blogging, thoughts, life]
+date: 2020-10-02
+img: posts/20201002/QM.png
+tags: [Python, Quantum Chemistry, Hartree Fock]
 author: Tianyou Mou
 description: "Midlife career change: a disaster or an opportunity?"
 ---
