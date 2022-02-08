@@ -5,7 +5,7 @@ show_date: true
 title: "Setting up your working environment"
 date: 2021-04-02
 img: posts/20200601/supercomputers.jpg
-tags: [Tutorial, Working environment]
+tags: [Tutorial, Working Environment]
 category: theory
 author: Armando Maynez
 description: "ELI5: what is a neural network."

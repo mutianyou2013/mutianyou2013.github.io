@@ -5,7 +5,7 @@ show_date: true
 title: "Data Mining for Catalyst Materials"
 date: 2021-08-01
 img: posts/20210801/Datamining.png
-tags: [Python, Data]
+tags: [Python, Catalysis, Data]
 author: Tianyou Mou
 description: "Data screening is crucial."
 ---
