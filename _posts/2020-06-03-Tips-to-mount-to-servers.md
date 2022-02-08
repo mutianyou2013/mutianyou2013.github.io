@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Tips to Mount Remote directories"
 date: 2020-06-03
-img: posts/20210324/starting_adventure.jpg
+img: posts/20200603/sshfs.png
 tags: [general blogging, thoughts, life]
 author: Armando Maynez
 description: "Midlife career change: a disaster or an opportunity?"
