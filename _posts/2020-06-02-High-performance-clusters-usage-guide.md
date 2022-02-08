@@ -5,7 +5,7 @@ show_date: true
 title: "High Performance Clusters Usage Guide"
 date: 2020-06-02
 img: posts/20210402/post7-header.webp
-tags: [neural networks, machine learning, artificial intelligence]
+tags: [Tutorial, Working environment]
 category: theory
 author: Tianyou Mou
 description: "ELI5: what is a neural network."

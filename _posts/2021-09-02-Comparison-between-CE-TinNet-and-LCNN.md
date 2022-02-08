@@ -5,9 +5,9 @@ show_date: true
 title: "Comparison between CE-TinNet and LCNN"
 date: 2021-09-02
 img: posts/20210902/CE.png
-tags: [Machine Learning, Cluster Expansion]
+tags: [Machine Learning, Cluster Expansion, Academia]
 author: Tianyou Mou
-description: "Midlife career change: a disaster or an opportunity?"
+description: "Machine learning for computational catalysis."
 ---
 
 ## Overview

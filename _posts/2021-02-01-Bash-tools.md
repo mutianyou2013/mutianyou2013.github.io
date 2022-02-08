@@ -5,7 +5,7 @@ show_date: true
 title: "Bash tools"
 date: 2021-02-01
 img: posts/20210201/bash.png
-tags: [neural networks, machine learning, artificial intelligence]
+tags: [Bash, Working environment]
 category: theory
 author: Tianyou Mou
 description: "ELI5: what is a neural network."

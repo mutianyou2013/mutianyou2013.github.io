@@ -5,7 +5,7 @@ show_date: true
 title: "Predicting material properties using transfer learning"
 date: 2020-02-01
 img: posts/20200201/TLnew2.png
-tags: [general blogging, thoughts, life]
+tags: [Python, Machine Leanring]
 author: Armando Maynez
 description: "Midlife career change: a disaster or an opportunity?"
 ---
