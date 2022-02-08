@@ -2,7 +2,7 @@
 layout: post
 read_time: true
 show_date: true
-title: "Tips to mount your directory to the server"
+title: "Tips to Mount Remote directories"
 date: 2020-06-03
 img: posts/20210324/starting_adventure.jpg
 tags: [general blogging, thoughts, life]
