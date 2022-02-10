@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "High Performance Clusters Usage Guide"
 date: 2020-06-02
-img: posts/20210402/post7-header.webp
+img: posts/20200602/titan.jpg
 tags: [Tutorial, Working Environment]
 category: theory
 author: Tianyou Mou
