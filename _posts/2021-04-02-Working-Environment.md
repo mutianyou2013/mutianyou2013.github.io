@@ -104,27 +104,7 @@ ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
 
 The key's randomart image is:
 
-+--[ RSA 2048]----+
-
-|                 |
-
-|         .       |
-
-|        E .      |
-
-|   .   . o       |
-
-|  o . . S .      |
-
-| + + o . +       |
-
-|. + o = o +      |
-
-| o...o * o       |
-
-|.  oo.o .        |
-
-+-----------------+
+<center><img src="./assets/img/posts/20210402/square.png" width="420"></center>
 
 (3). Save your public key to the server
 
