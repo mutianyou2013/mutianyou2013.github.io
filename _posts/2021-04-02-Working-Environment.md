@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Setting up your working environment"
 date: 2021-04-02
-img: posts/20200601/supercomputers.jpg
+img: posts/20210402/supercomputers.jpg
 tags: [Tutorial, Working Environment]
 category: theory
 author: Armando Maynez
