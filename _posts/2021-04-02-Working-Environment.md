@@ -21,7 +21,7 @@ For users that want to use the ARC system off campus, a VPN is needed. Check out
 
 Open your terminal software (in launchpad → other). 
 
-<center><img src="./assets/img/posts/20200601/terminal.png" width="300"></center>
+<center><img src="./assets/img/posts/20210402/terminal.png" width="300"></center>
 
 Login by ssh commands listed below. Our university’s supercomputing system has three available servers: Newriver, Cascades, and Tinkercliffs. You can log into any one of them to get access to your data since they are sharing the same storage. 
 
@@ -36,22 +36,21 @@ Then press Enter you will be asked to type in your password which is your VT acc
 
 Use this format since the 2-step authentication: mypassword,push (See [https://arc.vt.edu/2fa/](https://arc.vt.edu/2fa/)). After typing in your password, press Enter and your DUO app will ask you for authorization. 
 
-<center><img src="./assets/img/posts/20200601/login.png" width="540"></center>
 
 After the authorization, you will enter one of the arc computing systems successfully which looks like this: 
 
-<center><img src="./assets/img/posts/20200601/success.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/success.png" width="540"></center>
 
 3.Windows users login---By Installing SSH client
 
 After installing the Pulse Secure software, a Secure Shell (SSH) software is needed to enable you to connect to the arc server. If you are using a Windows machine, you will need to download an SSH client, such as PuTTY or the SSH Secure Shell Client.
 Here I give an instruction on how to use PuTTY as an example. Go to the website of [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/) and download. Then choose the 64 bit windows version.
 
-<center><img src="./assets/img/posts/20200601/putty.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/putty.png" width="540"></center>
 
 Follow the regular instructions and install the putty software. Then in the start menu you will the putty software and open it, a window will prompt out like this:
 
-<center><img src="./assets/img/posts/20200601/puttysession.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/puttysession.png" width="540"></center>
 
 At the Host Name session, write into the server address. Available servers and addresses are listed below. Our university’s supercomputing system has three available servers: Newriver, Cascades, and Tinkercliffs. You can log into any one of them to get access to your data since they are sharing the same storage. 
 
@@ -61,21 +60,21 @@ Tinkercliffs: tinkercliffs1.arc.vt.edu OR tinkercliffs2.arc.vt.edu
 
 Try Newriver first and for all servers try suffix 1 first, and if suffix 1 is not working then try suffix 2. In most cases suffix 1 will work. 
 
-<center><img src="./assets/img/posts/20200601/puttysession2.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/puttysession2.png" width="540"></center>
 
 Then you press open to turn on the SSH (Maybe a security alert window will prompt out and you just choose no.) and you will see ‘login as’
 
-<center><img src="./assets/img/posts/20200601/loginas.png" width="240"></center>
+<center><img src="./assets/img/posts/20210402/loginas.png" width="240"></center>
 
 Write into your arc account username. You can easily find it from the [coldfront.arc.vt.edu](coldfront.arc.vt.edu) website. 
 
 Then you will be asked to type in your password which is the same as your vt account password (not network password). Prepare your phone’s DUO app ready with you since you will need a 2-step authentication. After typing in your password, press Enter and your DUO app will ask you for authorization. 
 
-<center><img src="./assets/img/posts/20200601/duo1.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/duo1.png" width="540"></center>
 
 After this, you will enter the server file system finally. 
 
-<center><img src="./assets/img/posts/20200601/entered.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/entered.png" width="540"></center>
 
 4.Generate a ssh key for quick login next time.
 
