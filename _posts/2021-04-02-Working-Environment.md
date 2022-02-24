@@ -46,7 +46,7 @@ After the authorization, you will enter one of the arc computing systems success
 After installing the Pulse Secure software, a Secure Shell (SSH) software is needed to enable you to connect to the arc server. If you are using a Windows machine, you will need to download an SSH client, such as PuTTY or the SSH Secure Shell Client.
 Here I give an instruction on how to use PuTTY as an example. Go to the website of [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/) and download. Then choose the 64 bit windows version.
 
-<center><img src="./assets/img/posts/20210402/putty.png" width="540"></center>
+<center><img src="./assets/img/posts/20210402/putty1.png" width="540"></center>
 
 Follow the regular instructions and install the putty software. Then in the start menu you will the putty software and open it, a window will prompt out like this:
 
