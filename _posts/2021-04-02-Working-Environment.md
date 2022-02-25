@@ -21,7 +21,7 @@ For users that want to use the ARC system off campus, a VPN is needed. Check out
 
 Open your terminal software (in launchpad → other). 
 
-<center><img src="./assets/img/posts/20210402/terminal.png" width="300"></center>
+<center><img src="./assets/img/posts/20210402/terminal.png" width="240"></center>
 
 Login by ssh commands listed below. Our university’s supercomputing system has three available servers: Newriver, Cascades, and Tinkercliffs. You can log into any one of them to get access to your data since they are sharing the same storage. 
 
