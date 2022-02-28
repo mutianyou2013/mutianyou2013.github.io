@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Comparison between CE-TinNet and LCNN"
 date: 2021-11-02
-img: posts/20210902/CE.png
+img: posts/20211102/CE.png
 tags: [Machine Learning, Cluster Expansion, Academia]
 author: Tianyou Mou
 description: "Machine learning for computational catalysis."
