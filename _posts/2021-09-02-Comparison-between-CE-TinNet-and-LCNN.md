@@ -20,5 +20,10 @@ Lym et al. developed a novel lattice convolutional neural network (LCNN) that im
 
 <center><img src="./assets/img/posts/20210902/Figure4.jpg" width="800"></center>
 
-CE-TinNet is a ML based model that considers the lateral interactions between the adsorbates and surface atoms. It outperforms the LCNN when considering the adsorbate-adsorbate interactions for NO and O adsorption on Platinum.  
+## Comparison
+
+CE-TinNet is a ML based model that considers the lateral interactions between the adsorbates and surface atoms. It outperforms the LCNN when considering the adsorbate-adsorbate interactions for NO and O adsorption on Platinum. 
+
+More studies have been down on different surfaces with various adsorbates, and I'll share more results when it's ready to be published.
+ 
 
