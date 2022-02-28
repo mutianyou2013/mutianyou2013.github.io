@@ -15,13 +15,13 @@ permalink: about:output_ext
       <h3>{{site.author}}</h3>
       <p class="subtitle">{{site.about-author}}</p>
       <div class="blog-posts">
-        Resume
+        <a href='{{https://{{site.Resume}}'><img src="{{ relativebase }}/assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{site.author}}"></a>
       </div>
     </section>
     <section class="about-body">
       <ul class="contact-list">
       {% if site.Resume %}
-        <li class="Resume"><a class="Resume" href="{{site.Resume}}" target="_blank"><i class="fa fa-Resume"></i></a></li>
+        <li class="Resume"><a class="Resume" href="https://{{site.Resume}}" target="_blank"><i class="fa fa-Resume"></i></a></li>
       {% endif %}
       {% if site.twitter %}
         <li class="twitter"><a class="twitter" href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
