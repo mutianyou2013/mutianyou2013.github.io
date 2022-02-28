@@ -27,13 +27,14 @@ highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code h
 author: Tianyou Mou # add your name
 author-pic: Myself_Neon_grey.jpg
 about-author: Chemical Engineer and Data Scientist
-Resume: Resume
+
 
 # Contact links
 email: mutianyou2013@gmail.com # Add your Email address
 website: https://tianyoumou.com/ # Add your website
-linkedin: https://www.linkedin.com/in/tianyoumou/ # Add your Linkedin handle
-github: https://github.com/mutianyou2013/ # Add your Github handle
+linkedin: tianyoumou/ # Add your Linkedin handle
+github: mutianyou2013/ # Add your Github handle
+Resume: https://tianyoumou.com/Bi2.html/
 
 # Newsletter
 mailchimp: "https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4"
