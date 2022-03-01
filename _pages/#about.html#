@@ -1,0 +1,70 @@
+---
+layout: menu-page
+title: About
+permalink: about:output_ext
+---
+{% include calculate_relative_base.html %}
+{% include escape-404.html %}
+
+<div class="small-wrapper">
+  <div class="about-container">
+    <section class="about-header">
+      <div class="author-image-container">
+        <a href='{{ site.website }}'><img src="{{ relativebase }}/assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{site.author}}"></a>
+      </div>
+      <h3>{{site.author}}</h3>
+      <p class="subtitle">{{site.about-author}}</p>
+      <a href="{{ relativebase }}assets/img/TianyouMouResume.pdf" "application/pdf">Resume</a>
+  </body>
+    </section>
+    <section class="about-body">
+      <ul class="contact-list">
+      {% if site.twitter %}
+        <li class="twitter"><a class="twitter" href="https://twitter.com/{{site.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      {% endif %}
+      {% if site.linkedin %}
+        <li class="linkedin"><a class="linkedin" href="https://in.linkedin.com/in/{{site.linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      {% endif %}
+      {% if site.github %}
+        <li class="github"><a class="github" href="https://github.com/{{site.github}}" target="_blank"><i class="fa fa-github"></i></a></li>
+      {% endif %}
+      {% if site.email %}
+        <li class="email"><a class="email" href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a></li>
+      {% endif %}
+      {% if site.bandcamp %}
+        <li class="bandcamp"><a class="bandcamp" href="https://{{site.bandcamp}}.bandcamp.com" target="_blank"><i class="fa fa-bandcamp" aria-hidden="true"></i></a></li>
+      {% endif %}
+      {% if site.stackoverflow %}
+      <li class="stackoverflow"><a class="stackoverflow" href="https://stackoverflow.com/users/{{site.stackoverflow}}" target="_blank">
+        <i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+      {% endif %}
+      </ul>
+      <h3>Education</h3>
+      <p>Ph.D. in Chemical Engineering, Virginia Tech, Grade: 3.76, 2018 – Fall 2022</p>
+      <p>B.S. in Chemical Engineering, Rutgers, The State University of New Jersey, Grade: 3.96, 2016 – 2018</p>
+      <p>B.S. in Chemical Engineering, Beijing University of Chemical Technology (BUCT), Grade: 3.60, 2013 – 2016</p>
+      <h3>Working Experiences</h3>
+      <p><b>Graduate Research Assistant</b>, Xin group, Virginia Tech, Blacksburg, VA, 08.2018 - present</p>
+	
+      <p><b>Working Environment Coordinator</b>, Xin group, Virginia Tech, Blacksburg, VA, 08.2018 - present</p>
+      <h3>Teaching Experiences</h3>
+      
+      <h3>Peer-reviewed publications</h3>
+      <p><b>Mou, T.</b>; Han, X.; Pillai, H. S.; Zhu, H.; Xin, H., (2021) Understanding the Mechanism of CO2 Electroreduction on Bi Surfaces with Ionic Liquid Electrolytes. (<b>Manuscript.</b>)</p>
+      <p>Han, X.; <b>Mou, T.</b>; Liu, S.; Ji, M.; Gao, Q.; He, Q.; Xin, H.; Zhu, H., (2021) Heterostructured Bi–Cu2S nanocrystals for efficient CO2 electroreduction to formate. <i>Nanoscale Horizons.</i> (<b>Co-first author, accepted.</b>)</p>
+      <p><b>Mou, T.</b>; Han, X.; Zhu, H.; Xin, H. (2021) Machine Learning of Lateral Adsorbate Interactions in Surface Reaction Kinetics. <i>Current Opinion in Chemical Engineering.</i> (<b>Submitted.</b>)</p>
+      <p>Gao, Q.; <b>Mou, T.</b>; Liu, S.; Johnson, G.; Han, X.; Yan, Z.; Ji, M.; He, Q.; Zhang, S.; Xin, H.; Zhu, H. (2020) Monodisperse PdSn/SnOx core/shell nanoparticles with superior electrocatalytic ethanol oxidation performance. <i>Journal of Materials Chemistry A.</i> 2020, 8, 20931–20938. (DOI)</p>
+      <p>Wang, W.; Wang, K.; Zhang, Z.; Chen, J.;<b> Mou, T.</b>; Michel, F. M.; Xin, H.; Cai, W. Ultrahigh Tribocorrosion Resistance of Metals Enabled by Nano-Layering. <i>Acta Mater.</i> 2021, 206, 116609. (DOI)</p>
+      <p>Zhang, Z.; Yi, Y.; Liu, L.; <b>Mou, T.</b>; Xin, H.; Li, L.; Cai. W. Computational Design of Non-Equiatomic CoCrFeNi Alloys Towards Optimized Strength and Corrosion Resistance. <i>Scripta Materialia</i> (<b>Submitted.</b>)</p>
+      <h3>Conference</h3>
+      <p><b>Mou, T</b>; Pillai, H. S;  Xin, H., Cooperative Site and Electrolyte Design for Optimizing Interfacial Electrokinetics of CO<sub>2</sub> Reduction . <i>2022 Southeastern Catalysis Society Symposium</i>, Atlanta, GA. (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Pillai, H. S;  Xin, H., Understanding the Mechanism of CO<sub>2</sub> Electroreduction on Bi Surfaces with Ionic Liquid Electrolytes. <i>2021 AiChE Annual Meeting</i>, Boston, MA. (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Pillai, H. S;  Xin, H., Understanding the Mechanism of CO<sub>2</sub> Electroreduction on Bi Surfaces with Ionic Liquid Electrolytes. <i>2021 Virginia Clean Energy and Catalysis Club Summit</i>, virtual. (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Pillai, H. S;  Xin, H., Understanding the Mechanism of CO<sub>2</sub> Electroreduction on Bi Surfaces with Ionic Liquid Electrolytes <i>2020 SUNCAT Summer Institute Conference</i>, virtual.  (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Xin, H., Understanding the Mechanism of CO<sub>2</sub> Electroreduction on Bi Surfaces with Ionic Liquid Electrolytes <i>Southeastern Catalysis Society Symposium</i>, virtual.  (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Xin, H. Understanding Mechanisms of CO<sub>2</sub> Electroreduction on Cu(100) with Kinetic Monte Carlo Simulations. <i>2019 AiChE Annual Meeting</i>, Orlando, FL. (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Xin, H. Understanding Mechanisms of CO<sub>2</sub> Electroreduction on Cu(100) with Kinetic Monte Carlo Simulations. <i>2019 Machine Learning Workshop</i>, Atlanta, GA. (<b>Poster</b>) </p>
+      <p><b>Mou, T</b>; Xin, H. Understanding Mechanisms of CO<sub>2</sub> Electroreduction on Cu(100) with Kinetic Monte Carlo Simulations. <i>2019 Annual ChEGSA Symposium</i>, Blacksburg, VA. (<b>Poster</b>) </p>									 
+    </section> <!-- End About Body-->
+  </div> <!-- End About Container -->
+</div> <!-- End Small Wrapper -->
