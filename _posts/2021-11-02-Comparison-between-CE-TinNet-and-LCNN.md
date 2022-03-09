@@ -8,6 +8,7 @@ img: posts/20211102/CE.png
 tags: [Machine Learning, Cluster Expansion, Academia]
 author: Tianyou Mou
 description: "Machine learning for computational catalysis."
+mathjax: yes
 ---
 
 ## Overview
@@ -52,7 +53,7 @@ E_F(\sigma) = \frac{E_0(\sigma)-E_0(0)}{N} - \frac{\theta_O}{2}E_{0,O_2} - \thet
 
 The Pt(111) surface can be covered by NO, O adsorbate with 600 data points in total, and the unit cell is expanded when there are more adsorbates or at high coverages.
 
-<center><img src="./assets/img/posts/20211102/Pt.png" width="800"></center> 
+<center><img src="./assets/img/posts/20211102/Pt.png" width="660"></center> 
 
 The details of data preprocessing can be found in my previous [post](http://tianyoumou.com/CE-TinNet.html)
 
