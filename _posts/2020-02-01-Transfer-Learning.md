@@ -30,6 +30,8 @@ Then, let’s focus on how does this transfer learning work. There are two commo
 
 <center><img src="./assets/img/posts/20200201/TLnew1.png" width="620"></center>
 
+## Models
+
 The data set for machine-learning was retrieved from the Computational Materials Repository, which includes > 12000 molecular structures of porphyrins and DFT-calculated properties. The structure of the porphyrin is shown below. 
 
 <center><img src="./assets/img/posts/20200201/porphyrin.png" width="420"></center>
@@ -44,10 +46,18 @@ The schematic flow of the ElemNet-TL model is shown below, which uses the E-stat
 
 <center><img src="./assets/img/posts/20200201/TL.png" width="620"></center>
 
-At last, we can compare these two, we can see with transfer learning applied, we can get a much better performance even though we both just use the same experimental dataset to train the model. That’s because the transfer learning method use the pretrained large dataset  model first, and save the common features in the hidden layers. This helps to improve the performance. 
+At last, we can compare the result of training from scratch and training with transfer learning, we can see with transfer learning applied, we can get a much better performance even though we both just use the same experimental dataset to train the model. That’s because the transfer learning method use the pretrained large dataset  model first, and save the common features in the hidden layers. This helps to improve the performance. 
 
 <center><img src="./assets/img/posts/20200201/result.png" width="620"></center>
+
+## Conclusion
 
 In summary, A transfer learning model shows an enhanced performance compared with traditional machine learning model 
 
 Also, Transfer learning can be further applied to other area with limited amount of accurate data. 
+
+## References
+
+1.[Jha, D.; Ward, L.; Paul, A.; Liao, W.-K.; Choudhary, A.; Wolverton, C.; Agrawal, A. ElemNet: Deep Learning the Chemistry of Materials From Only Elemental Composition. Sci. Rep. 2018, 8 (1), 17593.](Jha, D.; Ward, L.; Paul, A.; Liao, W.-K.; Choudhary, A.; Wolverton, C.; Agrawal, A. ElemNet: Deep Learning the Chemistry of Materials From Only Elemental Composition. Sci. Rep. 2018, 8 (1), 17593.)
+
+2.[Li, Z.; Omidvar, N.; Chin, W. S.; Robb, E.; Morris, A.; Achenie, L.; Xin, H. Machine-Learning Energy Gaps of Porphyrins with Molecular Graph Representations. J. Phys. Chem. A 2018, 122 (18), 4571–4578.](Li, Z.; Omidvar, N.; Chin, W. S.; Robb, E.; Morris, A.; Achenie, L.; Xin, H. Machine-Learning Energy Gaps of Porphyrins with Molecular Graph Representations. J. Phys. Chem. A 2018, 122 (18), 4571–4578.)
