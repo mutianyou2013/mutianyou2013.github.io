@@ -30,23 +30,23 @@ Then, let’s focus on how does this transfer learning work. There are two commo
 
 <center><img src="./assets/img/posts/20200201/TLnew1.png" width="620"></center>
 
-Then, let’s take a look at one example on how to use transfer learning to predict materials properties. The input feature here is the element fractions. For example, for OH, fraction of O is 0.5, and fraction of H is also 0.5. And the target property is the formation energy of materials. The pretraining dataset is a DFT dataset with 341K materials. And they trained the model.Then they used a small database with only 2000 experimental samples to do transfer learning to predict the formation energy. 
+The data set for machine-learning was retrieved from the Computational Materials Repository, which includes > 12000 molecular structures of porphyrins and DFT-calculated properties. The structure of the porphyrin is shown below. 
 
-Let’s give a look at the training performance. 
+<center><img src="./assets/img/posts/20200201/porphyrin.png" width="420"></center>
 
-First, let’s focus on these two values because both are trained from scratch, which means for both cases, they used a random model first, then input data to train the model and got a performance.  
+Molecular representation, or feature engineering is a key ingredient in the development of machine-learning models. Here, I employed the electrotopological-state index (E-state index), which has been widely used in quantitative structure-property relationship (QSPR) models to predict boiling points, aqueous solubilities, and other thermophysical properties of organic molecules. 
 
-You can see if they have a large dataset, obviously, they’ll get a lower MAE which means a better performance. But since this OQMD dataset itself is not as accurate as experimental data, so we couldn’t really believe this result. 
+<center><img src="./assets/img/posts/20200201/Estate.png" width="300"></center>
 
-Then, let’s compare these two values. The first one is to use the model from large dataset, directly predict the experimental values. The MAE is higher. This transfer learning one is still using the model from large dataset, but do a transfer learning process, basically freeze most layers, retrained last several layers and get a predicting performance. This one is much better. 
+A deep neural network model called ElemNet is used to conduct the transfer learning framework. It has multiple layers of fully connected layers, some of which can be frozen for the training of transfer learning. 
 
-So the only difference between them are the OQMD-SC is a direct prediction by the large dataset model, and the transfer learning one has a transfer learning procedure based this large dataset model. 
+The schematic flow of the ElemNet-TL model is shown below, which uses the E-state index as the input to train a big source data to predict a target property. The pertained model is then employed with first couple layers fixed, and the target small dataset is used to train the last several layers and then predict another target property. 
 
 <center><img src="./assets/img/posts/20200201/TL.png" width="620"></center>
 
-<center><img src="./assets/img/posts/20200201/result.png" width="620"></center>
-
 At last, we can compare these two, we can see with transfer learning applied, we can get a much better performance even though we both just use the same experimental dataset to train the model. That’s because the transfer learning method use the pretrained large dataset  model first, and save the common features in the hidden layers. This helps to improve the performance. 
+
+<center><img src="./assets/img/posts/20200201/result.png" width="620"></center>
 
 In summary, A transfer learning model shows an enhanced performance compared with traditional machine learning model 
 
