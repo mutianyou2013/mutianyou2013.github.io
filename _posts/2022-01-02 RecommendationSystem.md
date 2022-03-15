@@ -80,6 +80,8 @@ d.to_csv('data.csv', index = False)
 ```
 ## Collaborative Filtering Recommendation System
 
+Collaborative filtering is the process of predicting the interests of a user by identifying preferences and information from many users. This is done by filtering data for information or patterns using techniques involving collaboration among multiple agents, data sources, etc. The idea behind the collaborative filtering is that if user A and B have similar taste in a product, then A and B are likely to have similar taste in other products as well. 
+
 ## Content Based Recommendation System
 
 ## Hybrid Recommendation System
