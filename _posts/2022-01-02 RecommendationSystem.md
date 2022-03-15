@@ -5,7 +5,7 @@ show_date: true
 title: "Recommendation Systems"
 date: 2022-01-02
 img: posts/20211102/CE.png
-tags: [Machine Learning, Cluster Expansion, Academia]
+tags: [recommendator, python]
 author: Tianyou Mou
 description: "Machine learning for computational catalysis."
 mathjax: yes
