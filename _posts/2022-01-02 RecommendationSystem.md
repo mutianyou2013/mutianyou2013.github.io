@@ -299,7 +299,13 @@ if __name__ == '__main__':
 
 ## Hybrid Recommendation System
 
-## Conclusions
+Various methods of recommendations systems have their own benefits and flaws. Often, many of these methods may seem restrictive when used in isolation, especially when multiple sources of data is available for the problem. Hybrid recommender systems are ones designed to use different available data sources to generate robust inferences.
 
-## References 
+Hybrid recommendation systems have two predominant designs, parallel and sequential. The parallel design provides the input to multiple recommendation systems, each of those recommendations are combined to generate one output. The sequential design provides the input parameters to a single recommendation engine, the output is passed on to the following recommender in a sequence. Refer to the figure below for a visual representation of both designs.
+
+## Takeaways
+
+Please be advised that this is just an introduction to recommendation engines. There are many more types and approaches to building out strong recommendation engines which are not covered in this article. Some notable ones are generating recommendation through link prediction, algorithmic approaches, bayesian models, markov models, etc…
+
+The aim of the article was to provide an intuitive understanding and implementation of the foundational methods used for recommendation systems (collaborative filtering, content based and hybrid). Collaborative filtering is the process of predicting the interests of a user by identifying preferences and information from many users, whereas content based systems generates recommendations based on the users preferences and profile. Hybrid systems are often a combination of many recommendation systems.
 
