@@ -82,6 +82,110 @@ d.to_csv('data.csv', index = False)
 
 Collaborative filtering is the process of predicting the interests of a user by identifying preferences and information from many users. This is done by filtering data for information or patterns using techniques involving collaboration among multiple agents, data sources, etc. The idea behind the collaborative filtering is that if user A and B have similar taste in a product, then A and B are likely to have similar taste in other products as well. 
 
+There are two common types of approaches in collaborative filtering, memory based and model based approach.
+
+### Memory based approaches
+
+Often referred to as neighbourhood collaborative filtering. Essentially, ratings of user-item combinations are predicted on the basis of their neighbourhoods. This can be further split into user based collaborative filtering and item based collaborative filtering. User based essentially means that likeminded users are going to yield strong and similar recommendations. Item based collaborative filtering recommends items based on the similarity between items calculated using user ratings of those items.
+
+### Model based approaches
+
+They are predictive models using machine learning. Features associated to the dataset are parameterized as inputs of the model to try to solve an optimization related problem. Model based approaches include using things like decision trees, rule based approaches, latent factor models etc.
+
+### Implementation
+
+- Import data from generate_data function (function provided above) or download the CSV from here. 
+- Generate a pivot table with readers on the index and books on the column and values being the ratings
+- Calculate similarity between items and users using svds.
+- Generate item recommendations based on user_id.
+
+```python
+import pandas as pd
+import numpy as np
+
+from scipy.sparse import csr_matrix
+from scipy.sparse.linalg import svds
+
+def normalize(pred_ratings):
+    '''
+    This function will normalize the input pred_ratings
+    
+    params:
+        pred_ratings (List -> List) : The prediction ratings 
+    '''
+    return (pred_ratings - pred_ratings.min()) / (pred_ratings.max() - pred_ratings.min())
+  
+def generate_prediction_df(mat, pt_df, n_factors):
+    '''
+    This function will calculate the single value decomposition of the input matrix
+    given n_factors. It will then generate and normalize the user rating predictions.
+    
+    params:
+        mat (CSR Matrix) : scipy csr matrix corresponding to the pivot table (pt_df)
+        pt_df (DataFrame) : pandas dataframe which is a pivot table
+        n_factors (Integer) : Number of singular values and vectors to compute. 
+                              Must be 1 <= n_factors < min(mat.shape). 
+    '''
+    
+    if not 1 <= n_factors < min(mat.shape):
+        raise ValueError("Must be 1 <= n_factors < min(mat.shape)")
+        
+    # matrix factorization
+    u, s, v = svds(mat, k = n_factors)
+    s = np.diag(s)
+
+    # calculate pred ratings
+    pred_ratings = np.dot(np.dot(u, s), v) 
+    pred_ratings = normalize(pred_ratings)
+    
+    # convert to df
+    pred_df = pd.DataFrame(
+        pred_ratings,
+        columns = pt_df.columns,
+        index = list(pt_df.index)
+    ).transpose()
+    return pred_df
+
+def recommend_items(pred_df, usr_id, n_recs):
+    '''
+    Given a usr_id and pred_df this function will recommend
+    items to the user.
+    
+    params:
+        pred_df (DataFrame) : generated from `generate_prediction_df` function
+        usr_id (Integer) : The user you wish to get item recommendations for
+        n_recs (Integer) : The number of recommendations you want for this user
+    '''
+    
+    usr_pred = pred_df[usr_id].sort_values(ascending = False).reset_index().rename(columns = {usr_id : 'sim'})
+    rec_df = usr_pred.sort_values(by = 'sim', ascending = False).head(n_recs)
+    return rec_df
+  
+if __name__ == '__main__':
+    # constants
+    PATH = '../data/data.csv'
+
+    # import data
+    df = pd.read_csv(PATH)
+    print(df.shape)
+
+    # generate a pivot table with readers on the index and books on the column and values being the ratings
+    pt_df = df.pivot_table(
+        columns = 'book_id',
+        index = 'reader_id',
+        values = 'book_rating'
+    ).fillna(0)
+
+    # convert to a csr matrix
+    mat = pt_df.values
+    mat = csr_matrix(mat)
+    
+    pred_df = generate_prediction_df(mat, pt_df, 10)
+
+    # generate recommendations
+    print(recommend_items(pred_df, 5, 5))
+```
+
 ## Content Based Recommendation System
 
 ## Hybrid Recommendation System
