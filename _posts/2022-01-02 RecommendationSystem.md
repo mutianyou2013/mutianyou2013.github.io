@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title: "Recommendation Systems"
-date: 2021-11-02
+date: 2022-01-02
 img: posts/20211102/CE.png
 tags: [Machine Learning, Cluster Expansion, Academia]
 author: Tianyou Mou
